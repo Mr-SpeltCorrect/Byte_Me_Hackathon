@@ -1,0 +1,17 @@
+.skills-list {
+    background: white;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .skills-list h3 {
+    margin-top: 0;
+  }
+  
+  .skills-list ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
