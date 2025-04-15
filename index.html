@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting Started with Three.js</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+			}
+		</script>
+  </head>
+  <body>
+    <div class="profile-header">
+      <h1>John Doe</h1>
+      <p>@johndoe</p>
+    </div>
+    
+    <p>Hello, I'm a third year computer science student at university of virginia .</p>
+
+    <div class="Experinces-list">
+      <h3>Experinces</h3>
+      <ul>
+        <li>Summer Google Software intern</li>
+        <li>College Electronic Assistant</li>
+      </ul>
+    </div>
+
+    <div class="skills-list">
+      <h3>Skills</h3>
+      <ul>
+        <li>3D Modeling</li>
+        <li>Blender</li>
+        <li>3D Printer</li>
+        <li>Altium Designer</li>
+        <li>C++, Python, Java</li>
+      </ul>
+    </div>
+
+    <div class="models-container">
+      <div class="model-card">
+        <div id="viewer" class="model-viewer"></div>
+        <div class="model-title">Scene.gltf</div>
+      </div>
+    </div>
+  
+    <script type="module" src="index.js"></script>
+  
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: #f0f0f0;
+      }
+  
+      .profile-header {
+        background: #222;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+  
+      .models-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+        padding: 2rem;
+      }
+  
+      .model-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+      }
+  
+      .model-viewer {
+        width: 100%;
+        height: 200px;
+        background: #ddd;
+        border-radius: 4px;
+      }
+  
+      .model-title {
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </body>
+</html>
