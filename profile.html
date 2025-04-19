@@ -1,63 +1,119 @@
 <!-- profile.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a class="active" href="profile.html">Profile</a>
-      <a href="showcase.html">Show Case</a>
-      <a href="maker_space.html">Maker Space</a>
-      <a href="company.html">Company</a>
-      <a href="contest.html">Contest</a>
-      <a href="community.html">Community</a>
-      <a href="login.html">Login</a>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile | Cmd.8</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a class="active" href="profile.html">Profile</a>
+    <a href="showcase.html">Showcase</a>
+    <a href="maker_space.html">Maker Space</a>
+    <a href="company.html">Company</a>
+    <a href="contest.html">Contest</a>
+    <a href="community.html">Community</a>
+    <a href="login.html">Login</a>
+  </nav>
 
-    <div class="profile-header">
-      <h1>My Profile</h1>
-    </div>
+  <header class="profile-header">
+    <h1>My Profile</h1>
+  </header>
+
+  <main class="profile-content">
+    <section class="user-info">
+      <h2>Username: Arnov Sharma</h2>
+    <!-----  <h3>Name: Bryan</h3> --->
+      <h4>About Me</h4>
+      <p>Hello world;</p>
+    </section>
+
+    <section class="social-links">
+      <h3>Connect with me</h3>
+      <a href="https://www.youtube.com/@ArnovSharma" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+      <a href="https://twitter.com/sharma_arnov" target="_blank">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.instagram.com/arnov_sharma/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </section>
     
-    <h1>Username:Cmd.8</h1>
-    <h2>Bryan</h2>
-    <h3>About</h3>
-    <p>Hello, my name is Bryan, I'm a computer egnineering major at Northern virginia community college</p>
 
-    <!-- Skills Section -->
-    <div class="expernice-list">
-      <h3>Excpernice</h3>
+    <section class="experience">
+      <h3>Experience</h3>
       <ul>
-        <li>1-Year Fabartion Lab</li>
+        <li>Free-lance programmer</li>
       </ul>
-    </div>
+    </section>
 
-    <!-- Skills Section -->
-    <div class="skills-list">
+    <section class="skills">
       <h3>Skills</h3>
       <ul>
-        <li>SolidWorks</li>
+        <li>Fusion 365</li>
         <li>3D Printing</li>
         <li>Altium Designer</li>
-        <li>C++, Python, Java</li>
+        <li>Programming: C++, Python, Java</li>
       </ul>
-    </div>
+    </section>
 
-    <h3>Projects:</h3>
-    <h4>CMYK 3D printer</h4>
-    <img src="photos/Heart P_T2 R1 W1 pt 1.jpg" alt="Google Logo" width="490" height="390" />
-    <p>This project shows that it's possible to blend color together for the first time</p>
+    <section class="projects">
+      <h3>Projects</h3>
 
-    <h4>Auto Sensor Farming System</h4>
-    <img src="photos/ESP-32 Farm System.png" alt="Google Logo" width="490" height="390" />
-    <p>This auto sensor farm   </p>
+      <article class="project">
+        <h4>CMYK 3D Printer</h4>
+        <img src="photos/Project_1.jpg" alt="CMYK 3D printer project showing blended colors" width="1090" height="890"/>
+        <img src="photos/Project_2.jpg" alt="CMYK 3D printer project showing blended colors" width="1090" height="890"/>
+        <p>Hey Guys how you doin!
 
-    <div class="content">
-      <p>This is the profile page. You can showcase user details, projects, skills, etc.</p>
-    </div>
-  </body>
+          So here's something super cool, a full-size Macintosh 128K-inspired PC completely 3D Printed and made from Scratch.
+          
+          The heart and brain of this project is a Latte Panda 3 Delta which is a Single Board computer powered by an Intel N5105 11th Gen Mobile Processor, it has 8GB LDDR4 Memory with 64GB eMMC onboard.
+          
+          As for the display, I'm using a 7-inch HD Display from a previous project that was a Handheld Gaming device. That setup was functional but it lacked power as it had Raspberry Pi 3B+ with only 1GB Ram.
+          
+          However, this current setup more is much powerful in terms of processing power, RAM, Storage, and other stuff.
+          
+          For the PC Enclosure, I've modeled the whole thing by taking inspiration from the original 1980s Macintosh 128K PC.
+          
+          Fusion360 was used to prepare the model and I then exported everything and use my good old ender 3 for printing every part with White and Orange PLA.
+          
+          This Bad boy can run all sorts of stuff, yes it can even run DOOM!
+          
+          This Instructables is about the whole built process of this LATTEintosh PC so let's get started.</p>
+      </article>
+
+      <article class="project">
+        <h4>Auto Sensor Farming System</h4>
+        <img src="photos/Project_3.jpg" alt="ESP32-based automatic farming system" width="490" height="390" />
+        <img src="photos/Project_4.jpg" alt="ESP32-based automatic farming system" width="490" height="390" />
+        <img src="photos/Project_5.png" alt="ESP32-based automatic farming system" width="490" height="390" />
+        <p>Greetings everyone and welcome back, Here's something. Fun and nostalgic. Right now, we are using our recently developed Batocera Arcad Box to run Roadrash using a PS1 emulator.
+
+          We're using Batocera Linux, which is an open-source and completely free retro-gaming distribution designed to turn any computer or single-board computer into a gaming console.
+          
+          Here, we booted Batocera on our fairly old Latte Panda V1 single-board computer, which was released in 2015 and had an Intel Atom x5-Z8350 quad-core processor with 4GB DDR3L RAM. This processor was powerful for an SBC at the time, but it is not very effective today if we want to use it to run Windows effectively.
+          
+          Making a retro arcade that can simulate systems like the PS1, PS2, PSP, SEGA, Gameboy, and others without breaking a sweat was one of the best uses for this old SBC.
+          
+          We created a compact box-like enclosure that holds the Latte Panda V1, a USB Extender Hub that allows us to connect multiple controllers to this device for multiple players, and a specially designed power circuit that requires 12V input and provides a steady 5V/3A output to operate the Latte Panda to its maximum capacity.
+          
+          We used one of our previous projects, the woodwork fusion, for the project's body and screen. To provide room for the arcade box, the PC's motherboard and other components were taken out.
+          
+          After that, we put our arcade box inside the PC frame and put everything together to create the ideal arcade system that runs Linux and Batocrea.
+          
+          This Instructables is about the whole build process of this project, so let's get started with the build.</p>
+      </article>
+    </section>
+
+    <section class="note">
+      <p>This is your profile page. You can showcase user details, projects, skills, and more.</p>
+    </section>
+  </main>
+</body>
 </html>
