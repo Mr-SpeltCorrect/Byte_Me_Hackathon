@@ -1,0 +1,134 @@
+<!-- showcase.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Case</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+
+    <div class="content">
+
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a class="active" href="showcase.html">Show Case</a>
+      <a href="maker_space.html">Maker Space</a>
+      <a href="company.html">Company</a>
+      <a href="contest.html">Contest</a>
+      <a href="community.html">Community</a>
+      <a href="login.html">Login</a>
+    </div>
+
+    <div class="profile-header">
+      <h1>Show Case</h1>
+    </div>
+
+    <div class="project-card">
+      <h3 class="username">@rolfebox</h3>
+    
+      <!-- Image container -->
+      <div class="image-slider">
+        <button class="arrow left" onclick="changeImage(-1, 'rolfebox')">&#8592;</button>
+        
+        <img id="projectImage-rolfebox" src="photos/Photo_1.jpg" alt="User Project" class="project-img" />
+        
+        <button class="arrow right" onclick="changeImage(1, 'rolfebox')">&#8594;</button>
+      </div>
+    
+      <p class="comment">“The 'Galactic Starcade' is a DIY retro bartop arcade cabinet for two players. It is powered by the Raspberry Pi micro-computer and plays multiple types of retro games - primarily NES, SNES, Megadrive and arcade (MAME) games.”</p>
+    
+      <div class="card-actions">
+        <button class="like-button" onclick="likeProject()">❤️ Like</button>
+        <span id="likeCount" class="like-count">12 likes</span>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <h3 class="username">@Robin_poe</h3>
+    
+      <!-- Image container -->
+      <div class="image-slider">
+        <button class="arrow left" onclick="changeImage(-1, 'Robin_poe')">&#8592;</button>
+        
+        <img id="projectImage-Robin_poe" src="photos/Game_1.gif" alt="User Project" class="project-img" />
+        
+        <button class="arrow right" onclick="changeImage(1, 'Robin_poe')">&#8594;</button>
+      </div>
+    
+      <p class="comment">“Gifs for the 'Zelda2-like' im developing! what do you think? :)”</p>
+    
+      <div class="card-actions">
+        <button class="like-button" onclick="likeProject('Robin_poe')">❤️ Like</button>
+        <span id="likeCount-Robin_poe" class="like-count">7 likes</span>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <h3 class="username">@patrick_star</h3>
+    
+      <!-- Image container -->
+      <div class="image-slider">
+        <button class="arrow left" onclick="changeImage(-1, 'patrick_star')">&#8592;</button>
+        
+        <img id="projectImage-patrick_star" src="photos/Wood_1.jpg" alt="User Project" class="project-img" />
+        
+        <button class="arrow right" onclick="changeImage(1, 'patrick_star')">&#8594;</button>
+      </div>
+    
+      <p class="comment">“Synchronicity is a unique exposed wood gear pendulum wall clock, with a combination of old and new tech.”</p>
+    
+      <div class="card-actions">
+        <button class="like-button" onclick="likeProject()">❤️ Like</button>
+        <span id="likeCount" class="like-count">12 likes</span>
+      </div>
+    </div>
+
+
+  </body>
+</html>
+
+
+
+
+<script>
+  const projectData = {
+    rolfebox: {
+      images: ["photos/Photo_1.jpg", "photos/Photo_2.jpg", "photos/Photo_3.png"],
+      currentIndex: 0,
+      likes: 12,
+    },
+    Robin_poe: {
+      images: ["photos/Game_1.gif", "photos/Game_2.gif", "photos/Game_3.gif"],
+      currentIndex: 0,
+      likes: 7,
+    },
+    patrick_star: {
+      images: ["photos/Wood_1.jpg", "photos/Wood_2.jpg", "photos/Wood_3.jpg"],
+      currentIndex: 0,
+      likes: 200,
+    },
+  };
+
+  function changeImage(direction, user) {
+    const data = projectData[user];
+    data.currentIndex += direction;
+
+    if (data.currentIndex < 0) {
+      data.currentIndex = data.images.length - 1;
+    } else if (data.currentIndex >= data.images.length) {
+      data.currentIndex = 0;
+    }
+
+    document.getElementById(`projectImage-${user}`).src = data.images[data.currentIndex];
+  }
+
+  function likeProject(user) {
+    const data = projectData[user];
+    data.likes++;
+    document.getElementById(`likeCount-${user}`).textContent = `${data.likes} likes`;
+  }
+</script>
