@@ -1,5 +1,44 @@
 /* style.css */
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slightly larger scale for the pulse effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+  background-color: #FF4081;
+  border: 2px solid transparent;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px 4px 20px; /* Added left margin to move it right */
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  animation: pulse 6s infinite;
+}
+
+button:hover {
+  background-color: #F50057;
+  animation: none;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+
+
 .about, .rules, .project {
   background-color: #1e1e1e;
   padding: 2rem;
@@ -40,7 +79,7 @@ h1 {
 img {
   display: block;
   margin: 2rem auto;
-  max-width: 220px;
+  max-width: 370px;
   height: auto;
   border-radius: 8px;
 }
@@ -126,4 +165,157 @@ body {
 .Companies-list img {
   display: block;
   margin-bottom: 1rem;
+}
+
+.project-card {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.username {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.comment {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.like-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+  background-color: #e60000;
+}
+
+.like-count {
+  font-weight: bold;
+  color: #555;
+}
+
+.image-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #444;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Background stars with dim overlay */
+.background-overlay {
+  background-image: url('photos/background.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.background-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* change opacity to your taste */
+  z-index: -1;
+}
+
+/* Content on top */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Project card with semi-clear background */
+.project-card {
+  background: rgba(15, 15, 15, 0.95); /* translucent black box */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(3px); /* optional: adds glass-like blur */
+}
+
+
+.username {
+  color: #ffcc00;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffcc00;
+}
+
+.comment {
+  font-style: italic;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff5722; /* or brand colors like #FF0000 for YouTube */
+}
+
+.social-links i {
+  margin-right: 8px;
 }
